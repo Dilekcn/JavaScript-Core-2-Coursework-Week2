@@ -5,7 +5,6 @@ content.style.display ="flex";
   for(let i=0; i<books.length; i++){
     let card = document.createElement("div");
     card.style.width ="340px";
-    card.style.backgroundColor ="yellow";
     card.style.marginLeft ="20px";
     card.style.paddingLeft ="20px";
 
@@ -25,10 +24,14 @@ content.style.display ="flex";
     p.appendChild(isRead);
     if(books[i].alreadyRead === true){
       isRead.innerText ="You read this book!!"
+      card.style.backgroundColor ="green";
+
     }else{
       isRead.innerText ="You do not read this book!!"
-      isRead.style.color="red"
+      isRead.style.color="white"
       isRead.style.fontSize= "16px"
+      card.style.backgroundColor ="red";
+
 
     }
 
